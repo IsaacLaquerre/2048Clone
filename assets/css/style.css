@@ -1,0 +1,42 @@
+:root {
+    --cell-size: 100px;
+    --text-color: #F9F6F2;
+    --board-color: #BBADA0;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#board {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: calc(4 * (var(--cell-size) + 20px));
+    height: calc(4 * (var(--cell-size) + 20px));
+    background-color: var(--board-color);
+    margin: auto;
+    position: relative;
+}
+
+.row {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: calc(var(--cell-size) + 20px);
+}
+
+.cell {
+    margin: 10px;
+    width: var(--cell-size);
+    height: var(--cell-size);
+    line-height: var(--cell-size);
+    text-align: center;
+    font-size: 21pt;
+    font-weight: bold;
+}
